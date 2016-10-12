@@ -1,0 +1,486 @@
+img {max-width: 100%;}
+
+body {
+	font-family: Consolas,monaco,monospace; 
+	background: url(../img/background.png) #1897ba no-repeat center top;
+	background-size: 100%;
+	color: #0e0f0a;
+	font-size: 17px;
+	text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 35px;
+}
+
+p:last-child {margin-bottom: 0;}
+
+
+
+/******* Inputs & Buttons ********/
+.form-control {
+	background: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: auto;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #0e0f0a;
+}
+.form-control:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.btn {
+    border: none;
+    border-radius: 0;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 400; 
+}
+.btn:hover {
+    box-shadow: none;
+    outline: none;
+    opacity: .9;
+}
+.btn-primary {
+	background: #3e3232;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:visited {
+    background: #3e3232;
+}
+
+.btn-default, .btn-default:hover, .btn-default:focus, .btn-default:visited {
+    background: #239EC0;
+    color: #fff;
+}
+
+
+/******** Layout *********/
+
+.col-centered {float: none; margin: auto;}
+
+@media (min-width: 1200px){
+	.container {
+	    width: 750px;
+	}
+}
+
+#wrapper {position: relative; overflow: hidden;}
+
+
+
+#header {
+    padding: 20px 0;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {width: 160px;}
+.bootstrap-select>.dropdown-toggle {
+    padding: 6px 0px 6px 22px;
+    clear: both;
+    background: transparent!important;
+    border: none!important;
+    box-shadow: none!important;
+    outline: none!important;
+}
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    background: transparent!important;
+    border: none!important;
+    box-shadow: none!important;
+    outline: none!important;
+}
+.bootstrap-select .dropdown-toggle:focus {outline: none!important;}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+     background: transparent!important;
+    border: none!important;
+    box-shadow: none!important;
+    outline: none!important;
+}
+.dropdown-menu {
+    padding: 0;
+    background: rgba(255,255,255,.2);
+    border-radius: 0;
+    border: none;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+.dropdown-menu>li>a {padding: 6px 23px;}
+.dropdown-menu li.selected {display: none;}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: auto;
+}
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.bs-caret {
+    background: rgba(255,255,255,.4);
+    display: inline-block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    right: 50%;
+    margin-right: -6px;
+    color: #fff;
+    border-top: 6px dashed;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+
+
+
+
+
+#footer {
+	text-align: center;
+	padding: 30px 0;
+}
+#footer img {
+    width: 230px;
+}
+
+
+#ticket {
+	background: url(../img/background-ticket.png) repeat;
+	border:solid 25px #fff;
+	padding: 30px;
+	margin-top: 170px;
+    position: relative;
+    z-index: 999;
+}
+#ticket header {
+	text-align: center;
+    width: 350px;
+    margin: auto;
+    margin-top: -210px;
+}
+#ticket section {padding: 50px 0;text-align: center;}
+
+#ticket .sep {
+	background: url(../img/dashed-lines.png) repeat-x;
+	background-size: cover;
+	height: 10px;
+	width: 100%;
+	display: block;
+}
+
+.numbers {margin: 25px 0 35px 0; text-align: center;}
+.numbers li {width: 13.5%; display: inline-block; vertical-align: top;}
+.numbers li.plus {width: 5%;padding-right: 10px;}
+.numbers li.plus > span {text-align: center;display: block;line-height: 42px;font-size: 25px;}
+.numbers li.bonus {background: #403232;}
+.numbers li.bonus .form-control {background: transparent;padding: 0 0 5px 0;font-size: 16px;color: #fff;}
+.numbers li.bonus span:before {
+	content: "Bonus";
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    padding: 2px 0;
+}
+
+.lucky-numbers {margin: 25px 0 0 0;}
+.lucky-numbers .form-control {
+	background: transparent;
+    font-size: 30px;
+    padding: 3px;
+    font-weight: bold;
+}
+.lucky-numbers.numbers li.bonus {background: transparent;}
+.lucky-numbers.numbers li.bonus .form-control {
+    background: #0e0f0a;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0 auto;
+}
+.lucky-numbers.numbers li.bonus span:before {color: #0e0f0a;margin-top: -12px;}
+
+
+.share-buttons {
+    width: 65%;
+    margin: 0 auto;
+}
+
+
+
+.loader {
+    background: url(../img/loader.gif) no-repeat;
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    line-height: 125px;
+}
+
+
+/***** Result ******/
+#section-five img {
+	margin: 20px 0;
+}
+#section-five #prize-money {
+	background: #322827;
+    padding: 10px;
+}
+#section-five #prize-money h1 {
+	color: #fff;
+	letter-spacing: 2px;
+	font-size: 2.2em;
+}
+#section-five .table {margin: 15px 0 00;}
+#section-five .table th:nth-child(odd){text-align: left; padding: 5px 3px 10px 3px;}
+#section-five .table th:nth-child(even){text-align: right; padding: 5px 0px 10px 3px;}
+#section-five .table td:nth-child(odd){text-align: left;}
+#section-five .table td:nth-child(even){text-align: right;}
+
+#section-five .table tr, #section-five .table th, #section-five .table td {border:none!important;}
+#section-five .table td {padding: 3px;}
+
+
+
+#section-six h2 {margin-bottom: 30px;}
+
+
+/***** Animations ******/
+
+.plane {
+	position: absolute;
+    width: 270px;
+
+    animation: planeanimation 60s infinite;
+    right: 0;
+
+    transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -webkit-transition: all 3s ease;
+    -o-transition: all 3s ease;
+}
+
+.boat {
+    position: absolute;
+    width: 90px;
+
+    
+    right: 50%;
+    animation: boatanimation 60s infinite;
+    
+    transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -webkit-transition: all 3s ease;
+    -o-transition: all 3s ease;
+}
+
+.jet {
+    position: absolute;
+    width: 80px;
+
+    
+    right: 50%;
+    
+    animation: yetanimation 25s infinite;
+    transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -webkit-transition: all 3s ease;
+    -o-transition: all 3s ease;
+}
+
+@keyframes yetanimation {
+    0% {
+       transform: rotate(-10deg) translateX(500px) translateY(-600px);
+    }
+    100% {
+         transform: rotate(50deg) translateX(350px) translateY(-1px);
+    }
+}
+
+@keyframes boatanimation {
+    0% {
+        transform: rotate(40deg) translateX(-350px) translateY(-600px);
+    }
+    100% {
+         transform: rotate(-20deg) translateX(-550px) translateY(-40px);
+    }
+}
+
+
+@keyframes planeanimation {
+    0% {
+        transform: rotate(10deg) translateX(400px) translateY(-1px);
+    }
+    100% {
+        transform: rotate(-30deg) translateX(-200px) translateY(-1800px);
+    }
+}
+
+
+
+
+
+
+/****** Model *****/
+.modal-content {
+    border-radius: 0;
+    border: none;
+}
+.modal-body {padding: 40px;}
+.modal-body h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.modal-body textarea {
+    font-size: .8em;
+    height: 150px;
+    border: solid 1px #ccc;
+}
+
+
+
+
+
+/***** social buttons ******/
+.social-share {text-align: center;}
+.share-btn {
+    display: inline-block;
+    color: #ffffff;
+    border: none;
+    padding: 0.5em;
+    width: 25%;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+    outline: none;
+    text-align: center;
+}
+
+.share-btn:hover {
+  color: #eeeeee;
+}
+
+.share-btn:active {
+  position: relative;
+  top: 2px;
+  box-shadow: none;
+  color: #e2e2e2;
+  outline: none;
+}
+
+.share-btn.twitter     { background: #55acee; }
+.share-btn.google-plus { background: #dd4b39; }
+.share-btn.facebook    { background: #3B5998; }
+.share-btn.linkedin    { background: #4875B4; }
+
+
+/***** Responsive ******/
+
+@media(max-width: 768px){
+    .container {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    #ticket {margin-top: 150px;}
+    #ticket header {width: 80%; margin: auto; margin-top: -210px;}
+    .numbers li {width: 16%;}
+    .numbers.us li { width: 15%;}
+    .numbers li.plus {
+    width: 9%!important;}
+    .numbers.lucky-numbers li {
+    width: 15%;}
+
+    .share-buttons {width: 100%;}
+
+    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {width: 80px;}
+
+}
+
+@media(max-width: 480px){
+    body {font-size: 15px;}
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    #ticket header {
+        margin-top: -170px;
+    }
+    #ticket {
+        margin-top: 100px;
+        padding: 15px;
+        border:solid 15px #fff;
+    }
+    .form-control {padding: 10px 2px;font-size: 17px;}
+    h2 {
+        font-size: 1.1em;
+        line-height: 1.3em;
+    }
+    #ticket section {
+        padding: 30px 0;
+    }
+    .plane , .boat, .jet {display: none;}
+    #header {
+        padding: 10px 0 40px 0;
+    }
+
+    .lucky-numbers .form-control {
+        font-size: 20px;
+    }
+    .numbers.lucky-numbers li {
+        width: 16%;
+    }
+    #section-three h2 {font-size: 1.1em;}
+    #section-five #prize-money h1 {font-size: 1.7em;}
+
+    .numbers li.bonus span:before {font-size: 9px;}
+
+    .lucky-numbers.us .form-control {
+        font-size: 16px;
+    }
+    .lucky-numbers.us li {
+        width: 15%;
+    }
+    .lucky-numbers li.plus > span {
+        line-height: 25px;
+        font-size: 20px;
+    }
+    .lucky-numbers.us li.bonus .form-control {
+        font-size: 14px;
+    }
+
+}
+
+@media(max-width: 320px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
