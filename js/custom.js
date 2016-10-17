@@ -222,7 +222,7 @@ var custom = {
 	},
 
 	numberValidation:function(){
-		$('#LottoNumbers .form-control').keydown(function(e){
+		$('#Lotto.form-control').keydown(function(e){
 			// Make sure they enter numbers!
 			if (e.which == 9) {
 
@@ -234,7 +234,7 @@ var custom = {
 
 		});
 
-		$('#LottoNumbers .form-control').keyup(function(e){
+		$('#Lotto .form-control').keyup(function(e){
 			if($(this).val().length == 2){
 				var first_number = parseInt($(this).val().slice(0, 1));
 
@@ -258,7 +258,7 @@ var custom = {
 	isUnique:function(val){
 		var timeRepeated = 0;
 
-		$('#LottoNumbers .form-control').each(function () {
+		$('#Lotto .form-control').each(function () {
             if ($(this).val() === val) {
                 timeRepeated++;
             }

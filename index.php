@@ -1,3 +1,14 @@
+<?php
+include 'view/v_lotto.php';
+
+$ball_1 = @$_POST['ball_1'];
+$ball_2 = @$_POST['ball_2'];
+$ball_3 = @$_POST['ball_3'];
+$ball_4 = @$_POST['ball_4'];
+$ball_5 = @$_POST['ball_5'];
+$ball_6 = @$_POST['ball_6'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,49 +64,17 @@
                     <h2>Discover when you would have won the lottery and how much you would have won</h2>
                 </section>
                 <div id="main">
-                    <span class="sep"></span>
-                    <section id="section-two">
-                        <h2>
-                            <strong>Enter your lucky numbers</strong>
-                        </h2>
-                        <form id="LottoNumbers" method="post" novalidate="novalidate">
-                            <ul class="list-inline numbers clearfix">
-                                <li>
-                                    <input type="number" class="form-control tooltipstered" name="number1" aria-required="true">
-                                </li>
-                                <li>
-                                    <input type="number" class="form-control tooltipstered" name="number2" aria-required="true">
-                                </li>
-                                <li>
-                                    <input type="number" class="form-control tooltipstered" name="number3" aria-required="true">
-                                </li>
-                                <li>
-                                    <input type="number" class="form-control tooltipstered" name="number4" aria-required="true">
-                                </li>
-                                <li>
-                                    <input type="number" class="form-control tooltipstered" name="number5" aria-required="true">
-                                </li>
-                                <li>
-                                    <input type="number" class="form-control tooltipstered" name="number6" aria-required="true">
-                                </li>
-                            </ul>
-                            <button type="submit" class="btn btn-primary" name="button">Show me the money</button>
-                        </form>
-                    </section>
+
+                    <?php 
+
+                    $lotto = display_lotto($ball_1, $ball_2, $ball_3, $ball_4, $ball_5, $ball_6);
+                    
+                    ?>
+
                 </div>
-                <div id="loader" style="display:none;">
-                    <span class="sep"></span>
-                    <section id="section-four">
-                        <h2><strong>Calculating</strong></h2>
-                        <div class="loader">54%</div>
-                        <div class="row">
-                            <div class="col-sm-9 col-centered">
-                                <p>This might take a couple of minutes, we are looking over the past 20 years to find if you would have been as rich as kim kardashian's backside</p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div id="response"></div>
+
+            <span class="sep"></span> 
+
             </div>
         </div>
 
