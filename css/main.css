@@ -393,6 +393,15 @@ input[type=number]::-webkit-outer-spin-button {
 .share-btn.facebook    { background: #3B5998; }
 .share-btn.linkedin    { background: #4875B4; }
 
+.error{
+    list-style: none;
+    margin: 20px;
+    border: 1px solid #F44336;
+    background: bisque;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 
 /***** Responsive ******/
 

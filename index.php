@@ -8,7 +8,9 @@ $ball_4 = @$_POST['ball_4'];
 $ball_5 = @$_POST['ball_5'];
 $ball_6 = @$_POST['ball_6'];
 
+session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,28 +18,12 @@ $ball_6 = @$_POST['ball_6'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Are your lottery numbers really lucky? If you played every single lottery with the same numbers how much would you have won? "/>
-    <meta property="og:locale" content="en_gb" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Would you have ever won a jackpot with your lottery numbers?" />
-    <meta property="og:description" content=" Are your lottery numbers really lucky? If you played every single lottery with the same numbers, how much would you have won?" />
-    <meta property="og:url" content="http://www.mrgamez.com/lottery-calculator/" />
-    <meta property="og:site_name" content="Would You Have Ever Won The Lottery ?" />
-    <meta property="article:publisher" content="https://www.facebook.com/mrgamezdotcom" />
-    <meta property="og:image" content="http://www.mrgamez.com/lottery-calculator/img/opengraph.jpg" />
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@mrgamezdotcom"/>
-    <meta name="twitter:domain" content="http://www.mrgamez.com/"/>
-    <meta name="twitter:creator" content="@mrgamezdotcom"/>
-    <meta name="twitter:title" content=" Would you have ever won a jackpot with your lottery numbers?">
-    <meta name="twitter:description" content=" Are your lottery numbers really lucky? If you played every single lottery with the same numbers, how much would you have won?">
-    <meta name="twitter:image" content="http://www.mrgamez.com/lottery-calculator/img/opengraph.jpg">
     
     <title>Lotto Results</title>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/tooltipster.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -115,9 +101,7 @@ $ball_6 = @$_POST['ball_6'];
     <!-- Javascript -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.min.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
+
   </body>
 </html>

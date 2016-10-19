@@ -2,20 +2,19 @@
 include 'model/m_events.php';
 
 
-
-
-
 function display_lotto($ball_1, $ball_2, $ball_3, $ball_4, $ball_5, $ball_6)
 {
 	if (!isset($_POST['lotto']))
     {
+
 	   echo '
         <span class="sep"></span>
 
 	    <section id="section-two">
 	        <h2>
 	            <strong>Enter your lucky numbers</strong>
-	        </h2>
+            </h2>
+
 		   <form id="lotto" action="index.php" method="post" novalidate="novalidate">
 			    <ul class="list-inline numbers clearfix">
 			        <li>
@@ -37,13 +36,24 @@ function display_lotto($ball_1, $ball_2, $ball_3, $ball_4, $ball_5, $ball_6)
 			            <input type="number" class="form-control tooltipstered" name="ball_6" aria-required="true">
 			        </li>
 			    </ul>
+
 			    <button type="submit" class="btn btn-primary" name="lotto">Show me the money</button>
-			</form>';
+                ';
+                if (!empty($_SESSION['error'] ))
+                {
+                   foreach($_SESSION['error'] as $error)
+                   {
+                    echo '<div class="centered error"><li>'.$error.'</li></div>';
+                   }
+                   session_unset();
+               }
+                echo '</form>';
     }	
     else
     {  
-
+    
     $Lotto = new Lotto();
+    $lotto = $Lotto->validate($ball_1, $ball_2, $ball_3, $ball_4, $ball_5, $ball_6); 
     $lotto = $Lotto->get_lotto_numbers($ball_1, $ball_2, $ball_3, $ball_4, $ball_5, $ball_6); 
 
     $item = '';
@@ -66,7 +76,7 @@ function display_lotto($ball_1, $ball_2, $ball_3, $ball_4, $ball_5, $ball_6)
     					<input type="text" class="form-control" value="'.$ball_1.'" readonly="">
     				</li>
     				<li>
-    					<input type="text" class="form-control" value="2'.$ball_2.'" readonly="">
+    					<input type="text" class="form-control" value="'.$ball_2.'" readonly="">
     				</li>
     				<li>
     					<input type="text" class="form-control" value="'.$ball_3.'" readonly="">

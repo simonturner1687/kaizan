@@ -74,4 +74,39 @@ function __construct()
             }
             return $lottos;
       }
+
+      public function validate($ball_1, $ball_2, $ball_3, $ball_4, $ball_5, $ball_6)
+      {
+
+        $balls = array($ball_1, $ball_2, $ball_3, $ball_4, $ball_5, $ball_6);
+        $balls = array_filter($balls);
+        $error = array();
+          if (count($balls) < 6)
+          {
+            $error[] = 'You must choose 6 numbers';
+            header('Location: index.php');
+          }
+
+          if (max($balls) > 59)
+          {
+            $error[] = 'Number must be below 59';
+            header('Location: index.php');
+          }
+
+          if (count(array_unique($balls)) < count($balls))
+          {
+            $error[] = 'Each number must be unique';
+            header('Location: index.php');
+          }
+
+
+
+          if (min($balls) <= 0)
+          {
+            $error[] = 'Number must be positive';
+            header('Location: index.php');
+          }
+
+          $_SESSION['error'] = $error;
+      }
     }  
